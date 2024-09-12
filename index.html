@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivenEats</title>
+    <!-- Importação das fontes Righteous e Roboto -->
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>DrivenEats</h1>
+            <p>Sua comida em 6 minutos</p>
+        </header>
+
+        <main>
+            <!-- Seção Prato -->
+            <section class="secao">
+                <h2 class="prato-texto">Primeiro, seu prato</h2>
+                <div class="menu-items">
+                    <div class="item item-prato01" onclick="selecionarItem('prato', this, 'Frango Yin Yang', '14.90')">
+                        <img src="img/pf_frango.jpg" alt="Frango Yin Yang">
+                        <h3>Frango Yin Yang</h3>
+                        <p>Um pouco de batata, um pouco de salada</p>
+                        <span class="preco">14,90</span>
+                    </div>
+                    <div class="item item-prato02" onclick="selecionarItem('prato', this, 'Carne Yin Yang', '18.90')">
+                        <img src="img/pf_carne.jpg" alt="Carne Yin Yang">
+                        <h3>Carne Yin Yang</h3>
+                        <p>Um pouco de batata, um pouco de salada</p>
+                        <span class="preco">18,90</span>
+                    </div>
+                    <div class="item item-prato03" onclick="selecionarItem('prato', this, 'Calabresa Yin Yang', '16.90')">
+                        <img src="img/pf_calabresa.png" alt="Calabresa Yin Yang">
+                        <h3>Calabresa Yin Yang</h3>
+                        <p>Um pouco de batata, um pouco de salada</p>
+                        <span class="preco">16,90</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Bebida -->
+            <section class="secao">
+                <h2 class="bebida-texto">Agora, sua bebida</h2>
+                <div class="menu-items">
+                    <div class="item item-bebida01" onclick="selecionarItem('bebida', this, 'Coquinha Gelada', '4.90')">
+                        <img src="img/coca.png" alt="Coquinha gelada">
+                        <h3>Coquinha gelada</h3>
+                        <p>Lata 350ml</p>
+                        <span class="preco">4,90</span>
+                    </div>
+                    <div class="item item-bebida02" onclick="selecionarItem('bebida', this, 'Fanta Laranja', '4.50')">
+                        <img src="img/fanta.png" alt="Fanta gelada">
+                        <h3>Fanta laranja</h3>
+                        <p>Lata 350ml</p>
+                        <span class="preco">4,50</span>
+                    </div>
+                    <div class="item item-bebida03" onclick="selecionarItem('bebida', this, 'Suco Laranja', '8.00')">
+                        <img src="img/suco.png" alt="Suco gelado">
+                        <h3>Suco laranja</h3>
+                        <p>Lata 300ml</p>
+                        <span class="preco">8,00</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seção Sobremesa -->
+            <section class="secao">
+                <h2 class="sobremesa-texto">Por fim, sua sobremesa</h2>
+                <div class="menu-items">
+                    <div class="item item-sobremesa01" onclick="selecionarItem('sobremesa', this, 'Brownie', '7.90')">
+                        <img src="img/brownie.jpg" alt="Brownie">
+                        <h3>Brownie</h3>
+                        <p>Apenas brownie</p>
+                        <span class="preco">7,90</span>
+                    </div>
+                    <div class="item item-sobremesa02" onclick="selecionarItem('sobremesa', this, 'Mouse', '5.40')">
+                        <img src="img/mouse.jpg" alt="Mouse">
+                        <h3>Mouse</h3>
+                        <p>Apenas mouse</p>
+                        <span class="preco">5,40</span>
+                    </div>
+                    <div class="item item-sobremesa03" onclick="selecionarItem('sobremesa', this, 'Pudim', '6.80')">
+                        <img src="img/pudim.jpg" alt="Pudim">
+                        <h3>Pudim</h3>
+                        <p>Apenas pudim</p>
+                        <span class="preco">6,80</span>
+                    </div>
+                </div>
+            </section>
+
+        <!-- Botão Finalizar -->
+        <footer>
+            <div class="foo-custom">
+                <button class="finalizar-pedido" disabled onclick="confirmarPedido()">Selecione os 3 itens para fechar o pedido</button>
+            </div>
+        </footer>
+        </main>
+    </div>
+        <!-- Fundo transparente ao redor do modal -->
+        <div class="modal-background"></div>
+
+        <!-- Modal de confirmação de pedido -->
+        <div class="modal-confirmacao">
+            <div class="modal-conteudo">
+                <h2 class="confirmar-texto">Confirme seu pedido</h2>
+                <div class="resumo-pedido"></div>
+                <button class="confirmar">Tudo certo, pode pedir!</button>
+                <button class="cancelar">Cancelar</button>
+            </div>
+        </div>
+        <!-- Modal de confirmação de pedido -->
+        <div class="modal-confirmacao" style="display: none;">
+            <div class="modal-conteudo">
+                <h2>Confirme seu pedido</h2>
+                <div class="resumo-pedido"></div>
+                <button class="confirmar">Tudo certo, pode pedir!</button>
+                <button class="cancelar">Cancelar</button>
+            </div>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
